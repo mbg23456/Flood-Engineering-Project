@@ -1,12 +1,16 @@
 # Copyright (C) 2018 Garth N. Wells
 #
 # SPDX-License-Identifier: MIT
+#
+#Based on a Cambridge University Engineering Group Project
 
 from floodsystem.stationdata import build_station_list
 
 
 def run():
-    """Requirements for Task 1A"""
+    """
+    Task 1A prints a sample of the station list.
+    """
 
     # Build list of stations
     stations = build_station_list()
@@ -23,5 +27,5 @@ def run():
 
 
 if __name__ == "__main__":
-    print("*** Task 1A: CUED Part IA Flood Warning System ***")
+    print("*** Task 1A: Flood Warning System ***")
     run()
