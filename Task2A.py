@@ -6,6 +6,9 @@ from floodsystem.stationdata import build_station_list, update_water_levels
 
 
 def run():
+    """
+    Task 2A: Determine the water levels of stations.
+    """
     # Build list of stations
     stations = build_station_list()
 
@@ -29,5 +32,5 @@ def run():
 
 
 if __name__ == "__main__":
-    print("*** Task 2A: CUED Part IA Flood Warning System ***")
+    print("*** Task 2A: Flood Warning System ***")
     run()

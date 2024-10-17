@@ -141,6 +141,16 @@ def fetch_measure_levels(measure_id, dt):
 
         # Append data
         dates.append(d)
+        try:
+            if type(measure['value']) == float:
+                levels.append(measure['value'])
+            else:
+                levels.append(sum(measure['value'])/len(measure['value']))
+        except KeyError:
+            levels.append(None)
+        # Water level is expected to be a single value (float)
+        # Modified to account for when water level are given as a range of water levels (lists)
+        # And when no data is available
         levels.append(measure['value'])
 
     return dates, levels
